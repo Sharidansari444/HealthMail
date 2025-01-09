@@ -524,6 +524,17 @@ footer p {
   color: white;
 
 }
+footer .icons{
+  margin-top: 10px;
+}
+footer .spantag{
+  font-size: 20px;
+}
+.light{
+  font-size: 20px;
+  margin: 35px;
+  color: #149eee;
+}
 
 .bmi {
   display: flex;
