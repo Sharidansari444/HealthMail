@@ -22,7 +22,7 @@ router.post("/send/mail",async( req,res,next)=>{
     const {name, email, message} = req.body;
     if(!name || !email || !message){
         res.json({
-            sucess:false,
+            success:false,
             message:"please fill the all input fields"})
     }
 

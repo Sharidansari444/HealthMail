@@ -23,7 +23,7 @@ const Contact = () => {
         headers: { "Content-Type": "application/json" }
       }
       );
-      if(data.success===false){
+      if(data.success === false){
 
         toast.error(data.message)
       }else{
