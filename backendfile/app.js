@@ -9,7 +9,7 @@ config({path : "./config.env"});
 
 const corsoptions = {
 
-    origin: "http://localhost:5173",
+    origin: "https://heartfelt-salamander-d58c63.netlify.app",
     methods:["POST"],
     credentials:true
 }
