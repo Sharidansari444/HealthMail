@@ -9,7 +9,7 @@ config({path : "./config.env"});
 
 const corsoptions = {
 
-    origin: "https://heartfelt-salamander-d58c63.netlify.app",
+    origin: "http://localhost:5173",
     methods:["POST"],
     credentials:true
 }
@@ -21,7 +21,7 @@ app.use(express.urlencoded({extended:  true}))
 router.post("/send/mail",async( req,res,next)=>{
     const {name, email, message} = req.body;
     if(!name || !email || !message){
-        res.json({
+        res.status(500).json({
             success:false,
             message:"please fill the all input fields"})
     }
