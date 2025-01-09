@@ -23,16 +23,21 @@ const Contact = () => {
         headers: { "Content-Type": "application/json" }
       }
       );
+      if(data.success===false){
+
+        toast.error(data.message)
+      }else{
+        toast.success(data.message)
+      }
       setName("")
       setEmail("")
       setMessage("")
-      toast.success(data.message)
       setLoading(false)
     } catch (error) {
-      setLoading(false)
       console.log(error)
-
-
+      setLoading(false)
+      
+      
     }
   }
 
