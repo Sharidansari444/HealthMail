@@ -13,7 +13,7 @@ const Contact = () => {
     e.preventDefault()
     setLoading(true)
     try {
-      const { data } = await axios.post("https://healthmail.onrender.com/send/mail",
+      const { data } = await axios.post("http://localhost:4000/send/mail",
         {
           name,
           email,
