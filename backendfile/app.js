@@ -1,7 +1,7 @@
+import cors from "cors";
 import express from "express";
 import { config } from "dotenv";
 import {sendemail} from "./utils/sendemail.js"
-import cors from "cors";
 
 const app = express()
 const router = express.Router()
@@ -10,19 +10,20 @@ config({path : "./config.env"});
 const corsoptions = {
 
     origin: [process.env.FRONTEND_URL],
-    methods:["POST "],
+    methods:["POST , GET "],
     credentials:true
 }
  
-app.use(cors(corsoptions));
 app.use(express.json())
 app.use(express.urlencoded({extended:  true}))
+app.use(cors(corsoptions));
+// app.options('*', cors());
 
-router.post("/send/mail",async( req,res,next)=>{
+router.post("/send/mail", async( req,res,next)=>{
     const {name, email, message} = req.body;
     if(!name || !email || !message){
         res.json({
-            sucess:false,
+            success:false,
             message:"please fill the all input fields"})
     }
 
