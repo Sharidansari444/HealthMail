@@ -9,7 +9,7 @@ config({path : "./config.env"});
 
 const corsoptions = {
 
-    origin: "https://heartfelt-salamander-d58c63.netlify.app",
+    origin: "https://heartfelt-salamander-d58c63.netlify.app", 
     methods:["POST"],
     credentials:true
 }
@@ -32,7 +32,7 @@ router.post("/send/mail",async( req,res,next)=>{
             email: "sharidansari444@gmail.com",
             subject : "THE KGN GYM",
             message,
-            useEmail : email ,
+            userEmail : email ,
             
 
         })
